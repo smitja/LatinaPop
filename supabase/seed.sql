@@ -1,0 +1,3 @@
+-- Seed locale (supabase db reset). Dalla M1: lookup (cluster, zone, tipi di
+-- evento), impostazioni con popcoin_enabled = false, utenti di test.
+-- Mai dati reali qui: le 44 attività entrano solo dall'import admin del CSV.
