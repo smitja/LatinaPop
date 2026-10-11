@@ -1,0 +1,13 @@
+pnpm-lock.yaml
+.next/
+node_modules/
+coverage/
+playwright-report/
+test-results/
+supabase/.temp/
+src/lib/supabase/database.types.ts
+# Documenti di progetto: si modificano a mano
+CLAUDE.md
+AGENTS.md
+docs/
+data/
