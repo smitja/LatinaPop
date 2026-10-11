@@ -1,0 +1,82 @@
+/*
+ * Latina Pop District — design token (provvisori).
+ *
+ * Unico punto per colori, tipografia, spaziature, raggi e ombre.
+ * L'identità visiva definitiva arriva dall'azione 1.1 del bando: per
+ * sostituirla basta cambiare i valori qui sotto, non i componenti.
+ *
+ * Contrasti verificati (WCAG 2.2):
+ *   ink su paper 15.6:1 · muted su paper 7.1:1
+ *   cluster A/B/D con testo bianco ≥ 5.3:1
+ *   cluster C/E con testo ink ≥ 6.6:1
+ * I bollini dei cluster hanno sempre bordo ink (contrasto non testuale)
+ * e la lettera del cluster: mai distinti solo dal colore.
+ */
+
+@theme static {
+  /* Carta e inchiostro */
+  --color-paper: #f2f4f6;
+  --color-surface: #ffffff;
+  --color-ink: #141a2e;
+  --color-muted: #4a5168;
+  --color-line: #141a2e;
+  --color-line-soft: #c9ced8;
+
+  /* Stati */
+  --color-focus: #ffc21a;
+  --color-success: #2b7a3d;
+  --color-danger: #b3261e;
+
+  /* Cluster: colore di riempimento + colore del testo sopra */
+  --color-cluster-a: #c8006a;
+  --color-cluster-a-ink: #ffffff;
+  --color-cluster-b: #0067b1;
+  --color-cluster-b-ink: #ffffff;
+  --color-cluster-c: #ffc21a;
+  --color-cluster-c-ink: #141a2e;
+  --color-cluster-d: #2b7a3d;
+  --color-cluster-d-ink: #ffffff;
+  --color-cluster-e: #ff7a1f;
+  --color-cluster-e-ink: #141a2e;
+
+  /* Scala tipografica (rem: rispetta il testo ingrandito del sistema) */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.35;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.45;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.55;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.4;
+  --text-xl: 1.625rem;
+  --text-xl--line-height: 1.2;
+  --text-2xl: 2.125rem;
+  --text-2xl--line-height: 1.1;
+  --text-3xl: 2.875rem;
+  --text-3xl--line-height: 1;
+  --text-code: 4.5rem;
+  --text-code--line-height: 1;
+
+  /* Spaziature: base 4px; nomi semantici per i punti ricorrenti */
+  --spacing: 0.25rem;
+  --spacing-gutter: 1rem;
+  --spacing-touch: 3rem; /* target minimo 48px */
+  --spacing-nav: 4.25rem; /* altezza della navigazione in basso */
+
+  /* Raggi */
+  --radius-sticker: 0.625rem;
+  --radius-card: 0.875rem;
+  --radius-pill: 999px;
+
+  /* Ombre: stampa piena, senza sfocatura (adesivo / figurina) */
+  --shadow-sticker: 3px 3px 0 0 var(--color-ink);
+  --shadow-card: 4px 4px 0 0 var(--color-ink);
+  --shadow-lift: 6px 6px 0 0 var(--color-ink);
+}
+
+@theme inline {
+  /* Le variabili --font-* sono definite da next/font in src/app/fonts.ts */
+  --font-display: var(--font-archivo), "Arial Black", system-ui, sans-serif;
+  --font-body: var(--font-atkinson), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: var(--font-atkinson), system-ui, -apple-system, "Segoe UI", sans-serif;
+}
